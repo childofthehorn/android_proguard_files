@@ -26,7 +26,7 @@ class ProguardFilter : FilenameFilter {
     }
 }
 ```
-3. Add the following function to `build.gradle.kts` in your `app` module under the `android{}` section
+3. Add the following function to `build.gradle.kts` in your `app` module (or other applicable module) under the `android{}` section
 ```kotlin
 android {
     ....
@@ -52,7 +52,7 @@ buildTypes{
 (Copied from 
 
 1. Place `*.pro` files in the following folder `android-app/app/proguard` (for most folks)
-2. Place the following bit of code in your `app` module (or function classes for build)`build.gradle` for a file filter
+2. Place the following bit of code in your `app` module (or function classes for building) `build.gradle` for a file filter
 ```groovy
 class ProguardFilter implements FilenameFilter {
     public boolean accept(File f, String filename) {
@@ -60,11 +60,11 @@ class ProguardFilter implements FilenameFilter {
     }
 }
 ```
-3. Add the following function to `build.gradle` in your `app` module under the `android{}` section
+3. Add the following function to `build.gradle` in your `app` module (or other applicable module) under the `android{}` section
 ```groovy
 android{
-    FileCollection proGuardFileCollection = files { file('./proguard').listFiles(ProguardFilter()) }
     ....
+    FileCollection proGuardFileCollection = files { file('./proguard').listFiles(ProguardFilter()) }
 }
 ```
 4. Apply your `proguard` collection in your `build.gradle.kts` in your `app` module under the `buildTypes{}` section
