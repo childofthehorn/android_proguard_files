@@ -49,7 +49,7 @@ buildTypes{
 ```
 
 ## Use with Groovy Gradle
-(Copied from 
+(Copied from [Proguard Snippets by @krschultz](https://github.com/krschultz/android-proguard-snippets) with some additions)<br/>
 
 1. Place `*.pro` files in the following folder `android-app/app/proguard` (for most folks)
 2. Place the following bit of code in your `app` module (or function classes for building) `build.gradle` for a file filter
