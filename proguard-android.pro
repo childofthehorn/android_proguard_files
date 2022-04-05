@@ -1,4 +1,4 @@
-# This is a configuration file for ProGuard.
+# Android Basic Proguard File
 # http://proguard.sourceforge.net/index.html#manual/usage.html
 -dontusemixedcaseclassnames
 -dontskipnonpubliclibraryclasses
@@ -7,7 +7,8 @@
 
 # Optimization is turned off by default. Dex does not like code run
 # through the ProGuard optimize and preverify steps (and performs some
-# of these optimizations on its own).
+# of these optimizations on its own). 
+# Adjust as needed here for optimizations (Many folks do use 3 passes or none like below)
 -dontoptimize
 
 -dontwarn javax.annotation.**
