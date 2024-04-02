@@ -16,6 +16,10 @@
     volatile <fields>;
 }
 
+# Diagnostics
+-keep class org.jetbrains.kotlin.diagnostics.** { *; }
+-keep class org.jetbrains.kotlin.compilier.plugin.** { *; }
+
 # SafeContinuation
 -keepclassmembernames class kotlin.coroutines.SafeContinuation {
     volatile <fields>;
